@@ -175,4 +175,7 @@
     
         const myHeading = document.querySelector('h2');
         myHeading.textContent = "Hello world!";
-    
+        let Quicktest = document.getElementById("Quicktest");
+        let Main = document.getElementById("Main");
+        Quicktest.innerHTML = "Testing Quicktest";
+        Main.innerHTML = "Testing Main";
