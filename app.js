@@ -194,7 +194,7 @@
             var out1 = '';
             for (var i=0; i < people.length; i++){
                 out1 += '<li>'+people[i].Name+'</li>';
-                console.log(people[i].Name);
+                console.log(people[i].ame);
             }
             document.getElementById("people").innerHTML=out1;
         }
