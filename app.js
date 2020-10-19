@@ -150,7 +150,7 @@
     */
     }
     //constuctor and prototype 
-    
+    /*
     {
         function User(name,hobby){
             this.name = name,
@@ -172,10 +172,33 @@
         let you = new User('sarath',['smoke','coding']);
         you.greet();
     }
-    
+    */
+    /*
+    // Html Tests
+    {
         const myHeading = document.querySelector('h2');
         myHeading.textContent = "Hello world!";
         let Quicktest = document.getElementById("Quicktest");
         let Main = document.getElementById("Main");
         Quicktest.innerHTML = "Testing Quicktest";
         Main.innerHTML = "Testing Main";
+    }  
+    */
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function(){
+        if (this.readyState==4 && this.status==200){
+            var response = JSON.parse(xhttp.responseText);
+            var people = response.people;
+            console.log(response.people);
+            //console.log(response.people);
+            var out1 = '';
+            for (var i=0; i < people.length; i++){
+                out1 += '<li>'+people[i].Name+'</li>';
+                console.log(people[i].Name);
+            }
+            document.getElementById("people").innerHTML=out1;
+        }
+    };
+    xhttp.open("GET", "People.json",true);
+    xhttp.send();
+   
